@@ -4,7 +4,7 @@ from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-api = '7938094703:AAGSdDlTimj7iYifQvLl9Ls3PYpS0aguXrY'
+api = ''
 bot = Bot(token=api)
 dp = Dispatcher(bot, storage=MemoryStorage())
 
@@ -51,16 +51,16 @@ async def main_menu(message):
 
 @dp.message_handler(text='Купить')
 async def get_buying_list(message):
-    await message.answer('Название: Product 1 | Описание: Крупы | Цена: 100')
+    await message.answer('Название: Product 1 | Описание: Описание1 | Цена: 100')
     with open("file/1.png", 'rb') as img:
         await message.answer_photo(img, reply_markup=kb0)
-    await message.answer('Название: Product 2 | Описание: Макароны | Цена: 200')
+    await message.answer('Название: Product 2 | Описание: Описание2 | Цена: 200')
     with open("file/2.png", 'rb') as img:
         await message.answer_photo(img, reply_markup=kb0)
-    await message.answer('Название: Product 3 | Описание: Мука | Цена: 300')
+    await message.answer('Название: Product 3 | Описание: Описание3 | Цена: 300')
     with open("file/3.png", 'rb') as img:
         await message.answer_photo(img, reply_markup=kb0)
-    await message.answer('Название: Product 4 | Описание: Сахар | Цена: 400')
+    await message.answer('Название: Product 4 | Описание: Описание4 | Цена: 400')
     with open("file/4.png", 'rb') as img:
         await message.answer_photo(img, reply_markup=kb0)
     await message.answer('Выберите продукт для покупки:', reply_markup=kb1)
